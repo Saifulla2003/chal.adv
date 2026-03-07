@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CHAL Advertisement | Redefining Media</title>
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    <link rel="preload" href="assets/hero3.jpeg" as="image">
+    <link rel="preload" href="assets/chall.png" as="image">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -44,9 +48,9 @@
         <!-- full‑width sliding backgrounds placed behind the content -->
         <div class="hero-slider">
             <div class="slide" style="background-image:url('assets/hero3.jpeg');"></div>
-            <div class="slide" style="background-image:url('assets/hero2.jpeg');"></div>
-            <div class="slide" style="background-image:url('assets/hero1.jpeg');"></div>
-            <div class="slide" style="background-image:url('assets/hero4.jpeg');"></div>
+            <div class="slide lazy-bg" data-bg="assets/hero2.jpeg"></div>
+            <div class="slide lazy-bg" data-bg="assets/hero1.jpeg"></div>
+            <div class="slide lazy-bg" data-bg="assets/hero4.jpeg"></div>
         </div>
 
         <div class="hero-content">
@@ -90,26 +94,6 @@
                 </p>
             </div>
 
-            <div class="about-right">
-
-                <!-- <div class="about-card">
-                    <h3>Our Vision</h3>
-                    <p>
-                        To redefine advertising in India by combining creativity,
-                        innovation, and regional expertise.
-                    </p>
-                </div>
-
-                <div class="about-card">
-                    <h3>Our Mission</h3>
-                    <p>
-                        Empower brands with impactful advertising solutions
-                        that drive visibility, engagement, and growth.
-                    </p>
-                </div> -->
-
-            </div>
-
         </div>
 
     </div>
@@ -127,42 +111,42 @@
         </div>
         <div class="services-grid">
             <div class="service-card">
-                <div class="service-img" style="background-image: url('assets/WALKER222.png');"></div>
+                <div class="service-img lazy-bg" data-bg="assets/WALKER222.png"></div>
                 <div class="card-content">
                     <h3>Advertising Videowalkers</h3>
                     <p>Mobile advertising platforms designed to maximize visibility and reach.</p>
                 </div>
             </div>
             <div class="service-card">
-                <div class="service-img" style="background-image: url('assets/billboard2.png');"></div>
+                <div class="service-img lazy-bg" data-bg="assets/billboard2.png"></div>
                 <div class="card-content">
                     <h3>Advertising Screens</h3>
                     <p>High definition digital displays that capture attention and strengthen brand presence.</p>
                 </div>
             </div>
             <div class="service-card">
-                <div class="service-img" style="background-image: url('assets/content.png');"></div>
+                <div class="service-img lazy-bg" data-bg="assets/content.png"></div>
                 <div class="card-content">
                     <h3>Content Creation</h3>
                     <p>Creative and compelling content tailored to enhance brand identity.</p>
                 </div>
             </div>
             <div class="service-card">
-                <div class="service-img" style="background-image: url('assets/socialmedia.png');"></div>
+                <div class="service-img lazy-bg" data-bg="assets/socialmedia.png"></div>
                 <div class="card-content">
                     <h3>Social Media Marketing</h3>
                     <p>Strategic, data driven campaigns that engage audiences and drive conversions.</p>
                 </div>
             </div>
             <div class="service-card">
-                <div class="service-img" style="background-image: url('assets/product.png');"></div>
+                <div class="service-img lazy-bg" data-bg="assets/product.png"></div>
                 <div class="card-content">
                     <h3>Product Marketing</h3>
                     <p>Customized strategies to position products effectively in competitive markets.</p>
                 </div>
             </div>
             <div class="service-card">
-                <div class="service-img" style="background-image: url('assets/service.png');"></div>
+                <div class="service-img lazy-bg" data-bg="assets/service.png"></div>
                 <div class="card-content">
                     <h3>Service Marketing</h3>
                     <p>Targeted campaigns that highlight service value and build customer trust.</p>
@@ -195,9 +179,7 @@
 </div>
     <div class="pricing-slider-wrapper two-videowalker">
         <button class="slider-nav prev-btn" aria-label="Previous Slide">
-            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16 20L8 12L16 4" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+            <i class="fa-solid fa-chevron-left" style="font-size: 30px;"></i>
         </button>
         
         <div class="slider-container">
@@ -241,12 +223,9 @@
         </div>
 
         <button class="slider-nav next-btn" aria-label="Next Slide">
-            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8 4L16 12L8 20" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+            <i class="fa-solid fa-chevron-right" style="font-size: 30px;"></i>
         </button>
     </div>
-    <div class="slider-pagination"></div>
 
 <!-- ================================================================================ -->
 
@@ -257,9 +236,7 @@
 
     <div class="pricing-slider-wrapper four-videowalker">
         <button class="slider-nav prev-btn" aria-label="Previous Slide">
-            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16 20L8 12L16 4" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+            <i class="fa-solid fa-chevron-left" style="font-size: 30px;"></i>
         </button>
         
         <div class="slider-container">
@@ -303,12 +280,9 @@
         </div>
 
         <button class="slider-nav next-btn" aria-label="Next Slide">
-            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8 4L16 12L8 20" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+            <i class="fa-solid fa-chevron-right" style="font-size: 30px;"></i>
         </button>
     </div>
-    <div class="slider-pagination"></div>
 
 
 <!-- ========================================================================== -->
@@ -321,9 +295,7 @@
 
      <div class="pricing-slider-wrapper six-videowalker">
         <button class="slider-nav prev-btn" aria-label="Previous Slide">
-            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16 20L8 12L16 4" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+            <i class="fa-solid fa-chevron-left" style="font-size: 30px;"></i>
         </button>
         
         <div class="slider-container">
@@ -367,12 +339,9 @@
         </div>
 
         <button class="slider-nav next-btn" aria-label="Next Slide">
-            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8 4L16 12L8 20" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+            <i class="fa-solid fa-chevron-right" style="font-size: 30px;"></i>
         </button>
     </div>
-    <div class="slider-pagination"></div>
 
 
 
@@ -386,9 +355,7 @@
 
     <div class="pricing-slider-wrapper loop-slider-wrapper no-highlight">
         <button class="slider-nav prev-btn" aria-label="Previous Slide">
-            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16 20L8 12L16 4" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+            <i class="fa-solid fa-chevron-left" style="font-size: 30px;"></i>
         </button>
 
         <div class="slider-container">
@@ -444,12 +411,9 @@
         </div>
 
         <button class="slider-nav next-btn" aria-label="Next Slide">
-            <svg width="50" height="50" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8 4L16 12L8 20" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+            <i class="fa-solid fa-chevron-right" style="font-size: 30px;"></i>
         </button>
     </div>
-    <div class="slider-pagination"></div>
 </section>
 
 

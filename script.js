@@ -341,3 +341,24 @@ document.querySelectorAll(".pricing-slider-wrapper").forEach(wrapper => {
     startTimer();
     setTimeout(updateSlider, 100);
 });
+
+// Lazy Loading Background Images
+document.addEventListener("DOMContentLoaded", function() {
+    const lazyBackgrounds = document.querySelectorAll('.lazy-bg');
+
+    if ('IntersectionObserver' in window) {
+        const lazyBgObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.backgroundImage = `url('${entry.target.dataset.bg}')`;
+                    entry.target.classList.remove('lazy-bg');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { rootMargin: "0px 0px 200px 0px" });
+
+        lazyBackgrounds.forEach(lazyBg => {
+            lazyBgObserver.observe(lazyBg);
+        });
+    }
+});
