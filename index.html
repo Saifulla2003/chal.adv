@@ -6,12 +6,15 @@
     <title>CHAL Advertisement | Redefining Media</title>
     <link rel="preload" href="styles.css" as="style">
     <link rel="preload" href="script.js" as="script">
-    <link rel="preload" href="assets/hero3.png" as="image" fetchpriority="high">
+    <link rel="preload" href="assets/hero3.png" as="image" fetchpriority="high" media="(min-width: 769px)">
+    <link rel="preload" href="assets/heromob3.png" as="image" fetchpriority="high" media="(max-width: 768px)">
     <link rel="preload" href="assets/challogo.png" as="image">
-    <link rel="preload" href="assets/herodesk1.png" as="image">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <style>
         .service-card {
             overflow: hidden;
@@ -51,7 +54,7 @@
             <div class="slide desktop-slide active" style="background-image:url('assets/hero3.png');"></div>
             <div class="slide desktop-slide lazy-bg" data-bg="assets/herodesk1.png"></div>
             <div class="slide desktop-slide lazy-bg" data-bg="assets/hero1.png"></div>
-            <div class="slide mobile-slide lazy-bg" data-bg="assets/heromob3.png"></div>
+            <div class="slide mobile-slide active" style="background-image:url('assets/heromob3.png');"></div>
             <div class="slide mobile-slide lazy-bg" data-bg="assets/heromob1.png"></div>
             <div class="slide mobile-slide lazy-bg" data-bg="assets/heromob2.png"></div>
             <div class="slide mobile-slide lazy-bg" data-bg="assets/heromob4.png"></div>
@@ -60,7 +63,7 @@
         </div>
 
         <div class="hero-content">
-            <img src="assets/logowithtext.png" alt="" class="hero-logo">
+            <img src="assets/logowithtext.png" alt="CHAL Advertisement" class="hero-logo" fetchpriority="high" width="300">
             <p class="hero-tagline">Elevating Brands Through Smart Advertising.</p>
             <a href="#services" class="btn-explore">Explore More</a>
         </div>
