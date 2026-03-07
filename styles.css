@@ -15,7 +15,7 @@ body { background: var(--bg); color: var(--text-main); font-family: 'Inter', san
 /* Background Image Overlay */
 body::before {
     content: ""; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    background-image: url('assets/bgbgbg.png'); background-size: 100% 100%; background-position: center;
+    background-image: url('assets/herospider.png'); background-size: 100% 100%; background-position: center;
     opacity: 8%; z-index: -2; pointer-events: none;
 }
 
@@ -422,7 +422,7 @@ body::before {
     /* glassy card with background image beneath */
     background:
         linear-gradient(160deg, rgba(255,255,255,0.1) 0%, rgba(13,24,12,0.4) 100%),
-        url('assets/2video.png') center/cover no-repeat;
+        url('assets/price2.png') center/cover no-repeat;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     color: #fff;
@@ -444,7 +444,7 @@ body::before {
 .four-videowalker .price-card {
     background:
         linear-gradient(160deg, rgba(255,255,255,0.1) 0%, rgba(13,24,12,0.4) 100%),
-        url('assets/4videowalkers.png') center/cover no-repeat;
+        url('assets/price4.png') center/cover no-repeat;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     color: #fff;
@@ -498,7 +498,7 @@ body::before {
 .six-videowalker .price-card {
     background:
         linear-gradient(160deg, rgba(255,255,255,0.1) 0%, rgba(13,24,12,0.4) 100%),
-        url('assets/6videowalkers.png') center/cover no-repeat;
+        url('assets/price6.png') center/cover no-repeat;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     color: #fff;
@@ -803,14 +803,6 @@ body::before {
         padding: 25px 0;
     }
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -1600,9 +1592,9 @@ body::before {
         transform: scale(1.2);
     }
 
-    .two-videowalker .price-card::after { background: url('assets/2video.png') center/cover no-repeat; }
-    .four-videowalker .price-card::after { background: url('assets/4videowalkers.png') center/cover no-repeat; }
-    .six-videowalker .price-card::after { background: url('assets/6videowalkers.png') center/cover no-repeat; }
+    .two-videowalker .price-card::after { background: url('assets/price2.png') center/cover no-repeat; }
+    .four-videowalker .price-card::after { background: url('assets/price4.png') center/cover no-repeat; }
+    .six-videowalker .price-card::after { background: url('assets/price6.png') center/cover no-repeat; }
 
     .slider-track .price-card::before {
         content: '';
