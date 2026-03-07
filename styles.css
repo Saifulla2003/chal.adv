@@ -410,7 +410,7 @@ body::before {
     /* glassy card with background image beneath */
     background:
         linear-gradient(160deg, rgba(255,255,255,0.1) 0%, rgba(13,24,12,0.4) 100%),
-        url('assets/price2.png') center/cover no-repeat;
+        url('assets/price2.webp') center/cover no-repeat;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     color: #fff;
@@ -432,7 +432,7 @@ body::before {
 .four-videowalker .price-card {
     background:
         linear-gradient(160deg, rgba(255,255,255,0.1) 0%, rgba(13,24,12,0.4) 100%),
-        url('assets/price4.png') center/cover no-repeat;
+        url('assets/price4.webp') center/cover no-repeat;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     color: #fff;
@@ -486,7 +486,7 @@ body::before {
 .six-videowalker .price-card {
     background:
         linear-gradient(160deg, rgba(255,255,255,0.1) 0%, rgba(13,24,12,0.4) 100%),
-        url('assets/price6.png') center/cover no-repeat;
+        url('assets/price6.webp') center/cover no-repeat;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     color: #fff;
@@ -1565,9 +1565,9 @@ body::before {
         transform: scale(1.2);
     }
 
-    .two-videowalker .price-card::after { background: url('assets/price2.png') center/cover no-repeat; }
-    .four-videowalker .price-card::after { background: url('assets/price4.png') center/cover no-repeat; }
-    .six-videowalker .price-card::after { background: url('assets/price6.png') center/cover no-repeat; }
+    .two-videowalker .price-card::after { background: url('assets/price2.webp') center/cover no-repeat; }
+    .four-videowalker .price-card::after { background: url('assets/price4.webp') center/cover no-repeat; }
+    .six-videowalker .price-card::after { background: url('assets/price6.webp') center/cover no-repeat; }
 
     .slider-track .price-card::before {
         content: '';

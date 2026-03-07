@@ -6,8 +6,8 @@
     <title>CHAL Advertisement | Redefining Media</title>
     <link rel="preload" href="styles.css" as="style">
     <link rel="preload" href="script.js" as="script">
-    <link rel="preload" href="assets/hero3.png" as="image" fetchpriority="high" media="(min-width: 769px)">
-    <link rel="preload" href="assets/heromob3.png" as="image" fetchpriority="high" media="(max-width: 768px)">
+    <link rel="preload" href="assets/hero3.webp" as="image" fetchpriority="high" media="(min-width: 769px)">
+    <link rel="preload" href="assets/heromob3.webp" as="image" fetchpriority="high" media="(max-width: 768px)">
     <link rel="preload" href="assets/challogo.png" as="image">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,19 +51,20 @@
     <header class="hero">
         <!-- full‑width sliding backgrounds placed behind the content -->
         <div class="hero-slider">
-            <div class="slide desktop-slide active" style="background-image:url('assets/hero3.png');"></div>
+            <div class="slide desktop-slide active" style="background-image:url('assets/hero3.webp');"></div>
             <div class="slide desktop-slide lazy-bg" data-bg="assets/herodesk1.png"></div>
-            <div class="slide desktop-slide lazy-bg" data-bg="assets/hero1.png"></div>
+            <div class="slide desktop-slide lazy-bg" data-bg="assets/hero1.webp"></div>
             <div class="slide mobile-slide active" style="background-image:url('assets/heromob3.png');"></div>
-            <div class="slide mobile-slide lazy-bg" data-bg="assets/heromob1.png"></div>
-            <div class="slide mobile-slide lazy-bg" data-bg="assets/heromob2.png"></div>
-            <div class="slide mobile-slide lazy-bg" data-bg="assets/heromob4.png"></div>
-            <div class="slide mobile-slide lazy-bg" data-bg="assets/hero3.png"></div>
-             <div class="slide mobile-slide lazy-bg" data-bg="assets/hero1.png"></div>
+            <div class="slide mobile-slide lazy-bg" data-bg="assets/heromob1.webp"></div>
+            <div class="slide mobile-slide lazy-bg" data-bg="assets/heromob2.webp"></div>
+            <div class="slide mobile-slide lazy-bg" data-bg="assets/heromob4.webp"></div>
+            <div class="slide mobile-slide lazy-bg" data-bg="assets/hero3.webp"></div>
+             <div class="slide mobile-slide lazy-bg" data-bg="assets/hero1.webp"></div>
         </div>
 
         <div class="hero-content">
-            <img src="assets/logowithtext.png" alt="CHAL Advertisement" class="hero-logo" fetchpriority="high" width="300">
+            <img src="assets/logowithtext.webp" alt="CHAL Advertisement" class="hero-logo" fetchpriority="high" width="300"
+            height="120">
             <p class="hero-tagline">Elevating Brands Through Smart Advertising.</p>
             <a href="#services" class="btn-explore">Explore More</a>
         </div>
@@ -120,42 +121,42 @@
         </div>
         <div class="services-grid">
             <div class="service-card">
-                <div class="service-img lazy-bg" data-bg="assets/service6.png"></div>
+                <div class="service-img lazy-bg" data-bg="assets/service6.webp"></div>
                 <div class="card-content">
                     <h3>Advertising Videowalkers</h3>
                     <p>Mobile advertising platforms designed to maximize visibility and reach.</p>
                 </div>
             </div>
             <div class="service-card">
-                <div class="service-img lazy-bg" data-bg="assets/service5.png"></div>
+                <div class="service-img lazy-bg" data-bg="assets/service5.webp"></div>
                 <div class="card-content">
                     <h3>Advertising Screens</h3>
                     <p>High definition digital displays that capture attention and strengthen brand presence.</p>
                 </div>
             </div>
             <div class="service-card">
-                <div class="service-img lazy-bg" data-bg="assets/service3.png"></div>
+                <div class="service-img lazy-bg" data-bg="assets/service3.webp"></div>
                 <div class="card-content">
                     <h3>Content Creation</h3>
                     <p>Creative and compelling content tailored to enhance brand identity.</p>
                 </div>
             </div>
             <div class="service-card">
-                <div class="service-img lazy-bg" data-bg="assets/service4.png"></div>
+                <div class="service-img lazy-bg" data-bg="assets/service4.webp"></div>
                 <div class="card-content">
                     <h3>Social Media Marketing</h3>
                     <p>Strategic, data driven campaigns that engage audiences and drive conversions.</p>
                 </div>
             </div>
             <div class="service-card">
-                <div class="service-img lazy-bg" data-bg="assets/service2.png"></div>
+                <div class="service-img lazy-bg" data-bg="assets/service2.webp"></div>
                 <div class="card-content">
                     <h3>Product Marketing</h3>
                     <p>Customized strategies to position products effectively in competitive markets.</p>
                 </div>
             </div>
             <div class="service-card">
-                <div class="service-img lazy-bg" data-bg="assets/service1.png"></div>
+                <div class="service-img lazy-bg" data-bg="assets/service1.webp"></div>
                 <div class="card-content">
                     <h3>Service Marketing</h3>
                     <p>Targeted campaigns that highlight service value and build customer trust.</p>
@@ -509,7 +510,7 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const observer = new IntersectionObserver((entries) => {
