@@ -144,8 +144,19 @@ body::before {
     opacity: 1;
 }
 
+@media (min-width: 769px) {
+    .mobile-slide { display: none; }
+}
+@media (max-width: 768px) {
+    .desktop-slide { display: none; }
+}
+
 @media (max-width: 600px) {
-    .hero { padding: 100px 15px 60px; min-height: 600px; }
+    .hero { 
+        padding: 150px 15px 60px; 
+        min-height: 600px; 
+        justify-content: flex-start;
+    }
     .hero-logo { 
         width: 100%; 
         height: auto;
@@ -274,33 +285,6 @@ body::before {
     margin:auto;
 }
 
-/* Section Headings */
-.package-head {
-    text-align: center;
-    /* softer gradient matching card tones */
-    color: transparent;
-    background: linear-gradient(90deg, rgba(212,175,55,1) 0%, rgba(20,168,81,1) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    font-size: 1.9rem;
-    letter-spacing: 0.12em;
-    font-weight: 800;
-    margin-bottom: 18px; /* bring heading closer to cards */
-    transform-origin: center;
-    padding-top: 6px;
-    position: relative;
-}
-.package-head::after {
-    content: '';
-    display: block;
-    width: 56px;
-    height: 3px;
-    background: linear-gradient(90deg, var(--brand-gold), var(--brand-green));
-    margin: 8px auto 0;
-    border-radius: 2px;
-    opacity: 0.95;
-}
-
 /* =============================== */
 /* PACKAGE TITLES */
 /* =============================== */
@@ -387,13 +371,6 @@ body::before {
         padding: 60px 15px;
     }
 
-}
-@media (max-width: 768px) {
-    .package-head {
-        font-size: 1.4rem;
-        margin-bottom: 12px;
-    }
-    .package-head::after { width: 42px; height: 3px; }
 }
 
 /* Premium Pricing Grid */
@@ -688,21 +665,6 @@ body::before {
     color: var(--brand-gold);
     font-weight: 800;
     margin-top: 15px;
-}
-
-
-/* Note */
-.pricing-note {
-    max-width: 900px;
-    margin: 0 auto 50px;
-    padding: 25px;
-    border-radius: 12px;
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.05);
-    text-align: center;
-    color: var(--text-dim);
-    font-size: 1.05rem;
-    line-height: 1.8;
 }
 
 /* Expanded Animation State */

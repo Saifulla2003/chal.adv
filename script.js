@@ -163,18 +163,34 @@ window.addEventListener("scroll", () => {
 
 // Hero slider rotation
 const heroSlides = document.querySelectorAll('.hero-slider .slide');
-let heroIndex = 0;
-
-function showHeroSlide(idx) {
-    heroSlides.forEach((s, i) => s.classList.toggle('active', i === idx));
-}
 
 if (heroSlides.length) {
-    showHeroSlide(0);
-    setInterval(() => {
-        heroIndex = (heroIndex + 1) % heroSlides.length;
-        showHeroSlide(heroIndex);
-    }, 5000);
+    const rotateSlides = () => {
+        const visibleSlides = Array.from(heroSlides).filter(s => getComputedStyle(s).display !== 'none');
+        if (visibleSlides.length === 0) return;
+
+        let activeIndex = visibleSlides.findIndex(s => s.classList.contains('active'));
+        
+        if (activeIndex !== -1) {
+            visibleSlides[activeIndex].classList.remove('active');
+        }
+        
+        const nextIndex = (activeIndex + 1) % visibleSlides.length;
+        visibleSlides[nextIndex].classList.add('active');
+    };
+
+    const initSlider = () => {
+        const visibleSlides = Array.from(heroSlides).filter(s => getComputedStyle(s).display !== 'none');
+        const activeSlide = document.querySelector('.hero-slider .slide.active');
+        if (visibleSlides.length > 0 && (!activeSlide || getComputedStyle(activeSlide).display === 'none')) {
+            if (activeSlide) activeSlide.classList.remove('active');
+            visibleSlides[0].classList.add('active');
+        }
+    };
+
+    initSlider();
+    window.addEventListener('resize', initSlider);
+    setInterval(rotateSlides, 5000);
 }
 
 // Pricing Card Click Expansion
