@@ -317,20 +317,47 @@ document.querySelectorAll(".pricing-slider-wrapper").forEach(wrapper => {
 
     // Swipe for Mobile
     let touchStartX = 0;
+    let isDragging = false;
+    let activeCard = null;
+
     wrapper.addEventListener('touchstart', e => {
-        touchStartX = e.changedTouches[0].screenX;
+        touchStartX = e.touches[0].clientX;
+        isDragging = true;
+        clearInterval(autoSlideInterval);
+        
+        activeCard = wrapper.querySelector('.price-card.active, .loop-card.active');
+        if (activeCard) {
+            activeCard.style.transition = 'none';
+        }
+    }, {passive: true});
+
+    wrapper.addEventListener('touchmove', e => {
+        if (!isDragging || !activeCard) return;
+        const currentX = e.touches[0].clientX;
+        const diff = currentX - touchStartX;
+        activeCard.style.transform = `translateX(${diff}px) rotate(${diff * 0.05}deg)`;
     }, {passive: true});
 
     wrapper.addEventListener('touchend', e => {
-        const touchEndX = e.changedTouches[0].screenX;
-        if (touchEndX < touchStartX - 50) {
+        if (!isDragging) return;
+        isDragging = false;
+        const touchEndX = e.changedTouches[0].clientX;
+        const diff = touchEndX - touchStartX;
+
+        if (activeCard) {
+            activeCard.style.transition = '';
+        }
+
+        if (diff < -50) {
             nextSlide();
-            resetTimer();
-        }
-        if (touchEndX > touchStartX + 50) {
+        } else if (diff > 50) {
             prevSlide();
-            resetTimer();
         }
+        
+        if (activeCard) {
+            activeCard.style.transform = '';
+        }
+        resetTimer();
     }, {passive: true});
 
     // Init
@@ -343,7 +370,7 @@ document.querySelectorAll(".pricing-slider-wrapper").forEach(wrapper => {
 });
 
 // Lazy Loading Background Images
-document.addEventListener("DOMContentLoaded", function() {
+(function() {
     const lazyBackgrounds = document.querySelectorAll('.lazy-bg');
 
     if ('IntersectionObserver' in window) {
@@ -355,10 +382,10 @@ document.addEventListener("DOMContentLoaded", function() {
                     observer.unobserve(entry.target);
                 }
             });
-        }, { rootMargin: "0px 0px 200px 0px" });
+        }, { rootMargin: "0px 0px 500px 0px" });
 
         lazyBackgrounds.forEach(lazyBg => {
             lazyBgObserver.observe(lazyBg);
         });
     }
-});
+})();
