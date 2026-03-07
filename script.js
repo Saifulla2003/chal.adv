@@ -405,3 +405,15 @@ document.querySelectorAll(".pricing-slider-wrapper").forEach(wrapper => {
         });
     }
 })();
+
+// Service Card Image Zoom Effect
+document.addEventListener('DOMContentLoaded', () => {
+    const serviceObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // Toggle class based on intersection state
+            entry.target.classList.toggle('in-view', entry.isIntersecting);
+        });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.service-card').forEach(el => serviceObserver.observe(el));
+});

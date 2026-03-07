@@ -31,25 +31,13 @@
         }
     }
 </script>
-    <style>
-        .service-card {
-            overflow: hidden;
-        }
-        .service-img {
-            transition: transform 0.8s ease;
-        }
-        .service-card.in-view .service-img {
-            transform: scale(1.1);
-        }
-        
-    </style>
 </head>
 <body>
     <div class="glow-orb"></div>
 
     <nav class="navbar">
         <div class="logo">
-            <div class="logo-box"><img src="assets/challogo.png" alt="logo"  ></div>
+            <div class="logo-box"><img src="assets/challogo.png" alt="logo" width="200" height="85"></div>
         </div>
         <ul class="nav-menu">
             <li><a href="#services"><span class="icon-mobile"><i class="fa-solid fa-layer-group"></i></span> Services</a></li>
@@ -68,7 +56,7 @@
         <!-- full‑width sliding backgrounds placed behind the content -->
         <div class="hero-slider">
             <div class="slide desktop-slide active" style="background-image:url('assets/hero3.webp');"></div>
-            <div class="slide desktop-slide lazy-bg" data-bg="assets/herodesk1.png"></div>
+            <div class="slide desktop-slide lazy-bg" data-bg="assets/herodesk1.webp"></div>
             <div class="slide desktop-slide lazy-bg" data-bg="assets/hero1.webp"></div>
             <div class="slide mobile-slide active" style="background-image:url('assets/heromob33.webp');"></div>
             <div class="slide mobile-slide lazy-bg" data-bg="assets/heromob1.webp"></div>
@@ -527,20 +515,5 @@
     </div>
 
     <script src="script.js" defer></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('in-view');
-                    } else {
-                        entry.target.classList.remove('in-view');
-                    }
-                });
-            }, { threshold: 0.2 });
-
-            document.querySelectorAll('.service-card').forEach(el => observer.observe(el));
-        });
-    </script>
 </body>
 </html>
