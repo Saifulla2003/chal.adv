@@ -1,8 +1,8 @@
 /* Exact Brochure Colors */
 :root {
     --bg: #0d180c;
-    --brand-green: #14a851; /* Exact Brochure Green */
-    --brand-gold: #d4af37;  /* Exact Brochure Gold */
+    --brand-green: #14a851; 
+    --brand-gold: #d4af37;  
     --card-bg: #111111;
     --text-main: #ffffff;
     --text-dim: #b3b3b3;
@@ -54,7 +54,6 @@ body::before {
 }
 .nav-menu a:hover { color: var(--brand-gold); }
 
-/* Underline effect for desktop links */
 .nav-menu li:not(:last-child) a::after {
     content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 1px;
     background: var(--brand-gold); transition: width 0.3s ease;
@@ -82,7 +81,7 @@ body::before {
 .hamburger { display: none; cursor: pointer; z-index: 1001; }
 .bar { display: block; width: 25px; height: 3px; background: white; margin: 5px; transition: 0.4s; }
 
-/* Cross Animation Classes */
+
 .is-active .bar:nth-child(2) { opacity: 0; }
 .is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
 .is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
@@ -92,7 +91,7 @@ body::before {
     position: relative;
     text-align: center;
     padding: 130px 5% 80px;
-    min-height: 600px; /* taller header as requested */
+    min-height: 600px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -129,7 +128,6 @@ body::before {
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
     background: rgba(13,24,12,0.55);
-    /* subtle dark overlay to match theme */
 }
 .hero-slider .slide {
     position: absolute;
@@ -182,7 +180,7 @@ body::before {
 @media (max-width: 400px) {
     .hero img {
         max-width: 100px;
-        max-width: 100px; /* smaller logo on mobile */
+        max-width: 100px;
     }
 }
 .badge { color: var(--brand-gold); border: 1px solid var(--brand-gold); display: inline-block; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; }
@@ -325,7 +323,6 @@ body::before {
     position:relative;
 }
 
-/* underline accent */
 .package-title h3::after{
     content:'';
     display:block;
@@ -405,17 +402,16 @@ body::before {
     transition: all 0.4s ease;
 }
 
-/* Background on 2‑Videowalker cards */
+
 .two-videowalker .price-card {
-    /* glassy card with background image beneath */
     background:
         linear-gradient(160deg, rgba(255,255,255,0.1) 0%, rgba(13,24,12,0.4) 100%),
         url('assets/price2.webp') center/cover no-repeat;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     color: #fff;
-    min-height: 380px; /* taller to better display image */
-    padding: 60px 30px; /* give extra vertical space for text */
+    min-height: 380px; 
+    padding: 60px 30px;
     border: 1px solid rgba(255,255,255,0.05);
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     border-radius: 16px;
@@ -451,7 +447,7 @@ body::before {
     box-shadow: 0 20px 50px rgba(212,175,55,0.15);
 }
 
-/* shared overlay for both types */
+
 .two-videowalker .price-card::before,
 .four-videowalker .price-card::before,
 .six-videowalker .price-card::before {
@@ -461,12 +457,12 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.65); /* darker overlay for contrast */
+    background: rgba(0,0,0,0.65); 
     border-radius: 16px;
     pointer-events: none;
 }
 
-/* text styling shared to ensure readability */
+
 .two-videowalker .price-card *,
 .four-videowalker .price-card *,
 .six-videowalker .price-card * {
@@ -482,7 +478,7 @@ body::before {
     }
 }
 
-/* Background on 6‑Videowalker cards */
+
 .six-videowalker .price-card {
     background:
         linear-gradient(160deg, rgba(255,255,255,0.1) 0%, rgba(13,24,12,0.4) 100%),
@@ -504,7 +500,7 @@ body::before {
     border-color: var(--brand-gold);
     box-shadow: 0 20px 50px rgba(212,175,55,0.15);
 }
-/* Ensure text remains centered if cards grow */
+
 .two-videowalker .price-card h4,
 .two-videowalker .price-card p,
 .two-videowalker .price-card span {
@@ -524,7 +520,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.65); /* darker overlay for contrast */
+    background: rgba(0,0,0,0.65); 
     border-radius: 16px;
     pointer-events: none;
 }
@@ -539,7 +535,7 @@ body::before {
     box-shadow: 0 20px 50px rgba(212,175,55,0.15);
 }
 
-/* Titles */
+
 .price-card h4 {
     color: var(--text-dim);
     letter-spacing: 0.2em;
@@ -547,14 +543,14 @@ body::before {
     text-transform: uppercase;
 }
 
-/* Duration */
+
 .price-card p {
     color: var(--text-main);
     margin: 15px 0 25px;
     font-size: 1.05rem;
 }
 
-/* Price */
+
 .price-card span {
     font-size: 2.4rem;
     color: var(--brand-gold);
@@ -576,7 +572,6 @@ body::before {
     font-weight: 700;
 }
 
-/* Loop Grid */
 .loop-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -586,7 +581,6 @@ body::before {
     padding: 0 10px;
 }
 
-/* Loop Cards – refined glassmorphism look */
 .loop-card {
     background: rgba(255,255,255,0.07);
     backdrop-filter: blur(15px);
@@ -678,13 +672,12 @@ body::before {
     margin-top: 15px;
 }
 
-/* Expanded Animation State */
 .price-card.expanded, .loop-card.expanded {
     transform: scale(1.1) !important;
     z-index: 100;
     border-color: var(--brand-gold);
     box-shadow: 0 30px 60px rgba(0,0,0,0.8);
-    background: var(--card-bg); /* Ensure readability when overlapping */
+    background: var(--card-bg); 
 }
 
 
@@ -735,7 +728,7 @@ body::before {
     animation: scroll 40s linear infinite;
 }
 
-/* Modern Outline Typography */
+
 .marquee-content span {
     font-family: "Inter", sans-serif;
     font-size: 3.5rem;
@@ -748,14 +741,14 @@ body::before {
     white-space: nowrap;
 }
 
-/* Hover Effect */
+
 .marquee-content span:hover {
     color: var(--brand-gold);
     -webkit-text-stroke: 0px;
     text-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
 }
 
-/* smooth motion */
+
 @keyframes scroll {
     from {
         transform: translateX(0);
@@ -892,7 +885,7 @@ body::before {
 .contact-btn:hover { transform: translateY(-3px); background: var(--brand-gold); }
 .contact-btn svg { width: 24px; height: 24px; fill: var(--text-main); }
 
-/* Footer Luxury Redesign */
+
 .footer { 
     background: linear-gradient(to bottom, #080f08, #000); 
     padding: 100px 5% 40px; 
@@ -1002,7 +995,7 @@ body::before {
     .footer { padding: 60px 15px 30px; }
 }
 
-/* Sticky Support Widget */
+
 .sticky-widget {
     position: fixed;
     bottom: 50px;
@@ -1084,7 +1077,7 @@ body::before {
 .sticky-action.instagram { color: #E1306C; border-color: #E1306C; }
 .sticky-action.instagram:hover { background: #E1306C; color: #fff; }
 
-/* Mobile View: Outline focus for Headset Icon */
+
 @media (max-width: 468px) {
     .sticky-widget {
         bottom: 40px;
@@ -1105,7 +1098,7 @@ body::before {
     }
 }
 
-/* Clients CTA Button */
+
 .clients-cta {
     text-align: center;
     margin-top: 40px;
@@ -1249,7 +1242,7 @@ body::before {
     gap:30px;
 }
 
-/* premium glass cards */
+
 .about-card{
     background:rgba(255,255,255,0.04);
     border:1px solid rgba(255,255,255,0.08);
@@ -1273,14 +1266,13 @@ body::before {
     margin-bottom:10px;
 }
 
-/* card text */
+
 .about-card p{
     color:var(--text-dim);
     font-size:0.95rem;
     line-height:1.7;
 }
 
-/* responsive */
 /* ============================= */
 /* TABLET RESPONSIVE */
 /* ============================= */
@@ -1369,10 +1361,10 @@ body::before {
     }
 
 }
-/* Mobile */
+
 @media (max-width: 768px) {
 
-    /* Mobile Card Expansion Animation */
+    
     .price-card.expanded, .loop-card.expanded {
         transform: scale(1.05) !important;
         z-index: 500;
@@ -1382,7 +1374,7 @@ body::before {
     }
 }
 
-/* Pricing Slider Styles */
+
 .pricing-slider-wrapper {
     display: flex;
     align-items: center;
@@ -1391,13 +1383,13 @@ body::before {
     max-width: 600px;
     margin: 0 auto;
     position: relative;
-    padding: 0 100px; /* Increased padding creates gap between arrow and card */
+    padding: 0 100px; 
 }
 
 .slider-container {
     overflow: hidden;
     width: 100%;
-    padding: 40px 0; /* Vertical padding only */
+    padding: 40px 0; 
 }
 
 .slider-track {
@@ -1409,9 +1401,9 @@ body::before {
 
 .slider-track .price-card,
 .slider-track .loop-card {
-    flex: 0 0 100%; /* One card fully */
+    flex: 0 0 100%; 
     width: 100%;
-    margin: 0; /* Reset any grid margins */
+    margin: 0; 
 }
 
 .slider-nav {
@@ -1475,10 +1467,10 @@ body::before {
     }
 }
 
-/* UNO Card Slider Effect for Mobile */
+
 @media (max-width: 768px) {
     .slider-container {
-        overflow: visible; /* Allow tilted cards to be seen */
+        overflow: visible; 
         padding-top: 20px;
         padding-bottom: 20px;
         touch-action: pan-y;
@@ -1486,14 +1478,14 @@ body::before {
 
     .slider-track {
         position: relative;
-        display: block; /* Override display:flex */
-        transform: none !important; /* Override any JS trying to slide the track */
+        display: block; 
+        transform: none !important; 
         transition: none !important;
-        min-height: 380px; /* Fallback height */
+        min-height: 380px; 
     }
 
     .loop-slider-wrapper .slider-track {
-        min-height: 450px; /* Taller for loop cards */
+        min-height: 450px; 
     }
 
     .slider-track .price-card,
@@ -1503,10 +1495,10 @@ body::before {
         left: 0;
         right: 0;
         margin: 0 auto;
-        width: 70%; /* Make cards smaller to see side cards */
+        width: 70%;
         transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.6s ease;
         opacity: 0;
-        flex: none; /* Override flex property */
+        flex: none; 
         will-change: transform, opacity;
         backface-visibility: hidden;
     }
@@ -1539,8 +1531,6 @@ body::before {
         opacity: 0;
         z-index: 1;
     }
-
-    /* Enhanced Blur and Noise for Mobile Cards */
     .slider-track .price-card {
         backdrop-filter: none;
         -webkit-backdrop-filter: none;
